@@ -13111,7 +13111,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
-<span class="kn">from</span> <span class="nn">exp.nb_01</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">exp.nb_01</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">def</span> <span class="nf">get_data</span><span class="p">():</span>
     <span class="n">path</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><span class="n">MNIST_URL</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="s1">&#39;.gz&#39;</span><span class="p">)</span>
@@ -13229,7 +13229,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
-<span class="k">def</span> <span class="nf">test_near_zero</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">):</span> <span class="k">assert</span> <span class="n">a</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span><span class="o">&lt;</span><span class="n">tol</span><span class="p">,</span> <span class="n">f</span><span class="s2">&quot;Near zero: </span><span class="si">{a}</span><span class="s2">&quot;</span>
+<span class="k">def</span> <span class="nf">test_near_zero</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">):</span> <span class="k">assert</span> <span class="n">a</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span><span class="o">&lt;</span><span class="n">tol</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Near zero: </span><span class="si">{a}</span><span class="s2">&quot;</span>
 </pre></div>
 
     </div>
@@ -13619,7 +13619,7 @@ $$\text{std} = \sqrt{\frac{2}{(1 + a^2) \times \text{fan_in}}}$$<p>This was intr
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
-<span class="kn">from</span> <span class="nn">torch.nn</span> <span class="k">import</span> <span class="n">init</span>
+<span class="kn">from</span> <span class="nn">torch.nn</span> <span class="kn">import</span> <span class="n">init</span>
 </pre></div>
 
     </div>
@@ -14358,7 +14358,7 @@ $$\text{std} = \sqrt{\frac{2}{(1 + a^2) \times \text{fan_in}}}$$<p>This was intr
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Relu</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inp</span> <span class="o">=</span> <span class="n">inp</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">out</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">clamp_min</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span><span class="o">-</span><span class="mf">0.5</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">out</span>
@@ -14377,9 +14377,9 @@ $$\text{std} = \sqrt{\frac{2}{(1 + a^2) \times \text{fan_in}}}$$<p>This was intr
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Lin</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">w</span><span class="p">,</span><span class="n">b</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">w</span><span class="p">,</span><span class="n">b</span>
         
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inp</span> <span class="o">=</span> <span class="n">inp</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">out</span> <span class="o">=</span> <span class="n">inp</span><span class="nd">@self</span><span class="o">.</span><span class="n">w</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">out</span>
@@ -14402,7 +14402,7 @@ $$\text{std} = \sqrt{\frac{2}{(1 + a^2) \times \text{fan_in}}}$$<p>This was intr
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Mse</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inp</span> <span class="o">=</span> <span class="n">inp</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">targ</span> <span class="o">=</span> <span class="n">targ</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">out</span> <span class="o">=</span> <span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span> <span class="o">-</span> <span class="n">targ</span><span class="p">)</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -14423,11 +14423,11 @@ $$\text{std} = \sqrt{\frac{2}{(1 + a^2) \times \text{fan_in}}}$$<p>This was intr
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Model</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b2</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b2</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">Lin</span><span class="p">(</span><span class="n">w1</span><span class="p">,</span><span class="n">b1</span><span class="p">),</span> <span class="n">Relu</span><span class="p">(),</span> <span class="n">Lin</span><span class="p">(</span><span class="n">w2</span><span class="p">,</span><span class="n">b2</span><span class="p">)]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">=</span> <span class="n">Mse</span><span class="p">()</span>
         
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span> <span class="n">x</span> <span class="o">=</span> <span class="n">l</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">targ</span><span class="p">)</span>
     
@@ -14549,7 +14549,7 @@ Wall time: 3.4 s
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Module</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">args</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">out</span>
@@ -14584,7 +14584,7 @@ Wall time: 3.4 s
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Lin</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">w</span><span class="p">,</span><span class="n">b</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">w</span><span class="p">,</span><span class="n">b</span>
         
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span> <span class="k">return</span> <span class="n">inp</span><span class="nd">@self</span><span class="o">.</span><span class="n">w</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
     
@@ -14620,11 +14620,11 @@ Wall time: 3.4 s
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Model</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">Lin</span><span class="p">(</span><span class="n">w1</span><span class="p">,</span><span class="n">b1</span><span class="p">),</span> <span class="n">Relu</span><span class="p">(),</span> <span class="n">Lin</span><span class="p">(</span><span class="n">w2</span><span class="p">,</span><span class="n">b2</span><span class="p">)]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">=</span> <span class="n">Mse</span><span class="p">()</span>
         
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span> <span class="n">x</span> <span class="o">=</span> <span class="n">l</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">targ</span><span class="p">)</span>
     
@@ -14754,7 +14754,7 @@ Wall time: 140 ms
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Lin</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">w</span><span class="p">,</span><span class="n">b</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">w</span><span class="p">,</span><span class="n">b</span>
         
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span> <span class="k">return</span> <span class="n">inp</span><span class="nd">@self</span><span class="o">.</span><span class="n">w</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
     
@@ -14877,7 +14877,7 @@ Wall time: 140 ms
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
-<span class="kn">from</span> <span class="nn">torch</span> <span class="k">import</span> <span class="n">nn</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
 </pre></div>
 
     </div>
@@ -14891,12 +14891,12 @@ Wall time: 140 ms
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_in</span><span class="p">,</span> <span class="n">nh</span><span class="p">,</span> <span class="n">n_out</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_in</span><span class="p">,</span> <span class="n">nh</span><span class="p">,</span> <span class="n">n_out</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_in</span><span class="p">,</span><span class="n">nh</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">nh</span><span class="p">,</span><span class="n">n_out</span><span class="p">)]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">=</span> <span class="n">mse</span>
         
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span> <span class="n">x</span> <span class="o">=</span> <span class="n">l</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">targ</span><span class="p">)</span>
 </pre></div>

@@ -13083,7 +13083,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="n">reload_ext</span> <span class="n">autoreload</span>
@@ -13098,10 +13098,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.vision</span> <span class="k">import</span> <span class="o">*</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.vision</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 
     </div>
@@ -13118,7 +13118,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">MNIST</span><span class="p">)</span>
@@ -13128,10 +13128,67 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-15-7f85dd983483&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>path <span class="ansi-blue-fg">=</span> untar_data<span class="ansi-blue-fg">(</span>URLs<span class="ansi-blue-fg">.</span>MNIST<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/conda/envs/fastai/lib/python3.6/site-packages/fastai/datasets.py</span> in <span class="ansi-cyan-fg">untar_data</span><span class="ansi-blue-fg">(url, fname, dest, data, force_download)</span>
+<span class="ansi-green-intense-fg ansi-bold">    231</span>         <span class="ansi-green-fg">if</span> url <span class="ansi-green-fg">in</span> _checks<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    232</span>             <span class="ansi-green-fg">assert</span> _check_file<span class="ansi-blue-fg">(</span>fname<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> _checks<span class="ansi-blue-fg">[</span>url<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">f&#34;Downloaded file {fname} does not match checksum expected! Remove that file from {Config().data_archive_path()} and try your code again.&#34;</span>
+<span class="ansi-green-fg">--&gt; 233</span><span class="ansi-red-fg">         </span>tarfile<span class="ansi-blue-fg">.</span>open<span class="ansi-blue-fg">(</span>fname<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;r:gz&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>extractall<span class="ansi-blue-fg">(</span>dest<span class="ansi-blue-fg">.</span>parent<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    234</span>     <span class="ansi-green-fg">return</span> dest
+
+<span class="ansi-green-fg">/opt/conda/envs/fastai/lib/python3.6/tarfile.py</span> in <span class="ansi-cyan-fg">extractall</span><span class="ansi-blue-fg">(self, path, members, numeric_owner)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2008</span>             <span class="ansi-red-fg"># Do not set_attrs directories, as we will do that further down</span>
+<span class="ansi-green-intense-fg ansi-bold">   2009</span>             self.extract(tarinfo, path, set_attrs=not tarinfo.isdir(),
+<span class="ansi-green-fg">-&gt; 2010</span><span class="ansi-red-fg">                          numeric_owner=numeric_owner)
+</span><span class="ansi-green-intense-fg ansi-bold">   2011</span> 
+<span class="ansi-green-intense-fg ansi-bold">   2012</span>         <span class="ansi-red-fg"># Reverse sort directories.</span>
+
+<span class="ansi-green-fg">/opt/conda/envs/fastai/lib/python3.6/tarfile.py</span> in <span class="ansi-cyan-fg">extract</span><span class="ansi-blue-fg">(self, member, path, set_attrs, numeric_owner)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2050</span>             self._extract_member(tarinfo, os.path.join(path, tarinfo.name),
+<span class="ansi-green-intense-fg ansi-bold">   2051</span>                                  set_attrs<span class="ansi-blue-fg">=</span>set_attrs<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">-&gt; 2052</span><span class="ansi-red-fg">                                  numeric_owner=numeric_owner)
+</span><span class="ansi-green-intense-fg ansi-bold">   2053</span>         <span class="ansi-green-fg">except</span> OSError <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2054</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>errorlevel <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/conda/envs/fastai/lib/python3.6/tarfile.py</span> in <span class="ansi-cyan-fg">_extract_member</span><span class="ansi-blue-fg">(self, tarinfo, targetpath, set_attrs, numeric_owner)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2120</span> 
+<span class="ansi-green-intense-fg ansi-bold">   2121</span>         <span class="ansi-green-fg">if</span> tarinfo<span class="ansi-blue-fg">.</span>isreg<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 2122</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>makefile<span class="ansi-blue-fg">(</span>tarinfo<span class="ansi-blue-fg">,</span> targetpath<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2123</span>         <span class="ansi-green-fg">elif</span> tarinfo<span class="ansi-blue-fg">.</span>isdir<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2124</span>             self<span class="ansi-blue-fg">.</span>makedir<span class="ansi-blue-fg">(</span>tarinfo<span class="ansi-blue-fg">,</span> targetpath<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/conda/envs/fastai/lib/python3.6/tarfile.py</span> in <span class="ansi-cyan-fg">makefile</span><span class="ansi-blue-fg">(self, tarinfo, targetpath)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2169</span>                 target<span class="ansi-blue-fg">.</span>truncate<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2170</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 2171</span><span class="ansi-red-fg">                 </span>copyfileobj<span class="ansi-blue-fg">(</span>source<span class="ansi-blue-fg">,</span> target<span class="ansi-blue-fg">,</span> tarinfo<span class="ansi-blue-fg">.</span>size<span class="ansi-blue-fg">,</span> ReadError<span class="ansi-blue-fg">,</span> bufsize<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2172</span> 
+<span class="ansi-green-intense-fg ansi-bold">   2173</span>     <span class="ansi-green-fg">def</span> makeunknown<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> tarinfo<span class="ansi-blue-fg">,</span> targetpath<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">path</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
@@ -13147,14 +13204,14 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training&#39;),
- PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/testing&#39;)]</pre>
+<pre>[PosixPath(&#39;/storage/mnist_png/testing&#39;),
+ PosixPath(&#39;/storage/mnist_png/training&#39;)]</pre>
 </div>
 
 </div>
@@ -13165,7 +13222,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">il</span> <span class="o">=</span> <span class="n">ImageList</span><span class="o">.</span><span class="n">from_folder</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">convert_mode</span><span class="o">=</span><span class="s1">&#39;L&#39;</span><span class="p">)</span>
@@ -13178,10 +13235,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">il</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">il</span><span class="o">.</span><span class="n">items</span><span class="p">))</span>
+<span class="n">il</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13194,13 +13252,24 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>16530
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training/4/44688.png&#39;)</pre>
+<pre>PosixPath(&#39;/storage/mnist_png/testing/2/4723.png&#39;)</pre>
 </div>
 
 </div>
@@ -13211,10 +13280,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">defaults</span><span class="o">.</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># set default colourmap for displaying images in fastai</span>
+<span class="n">defaults</span><span class="o">.</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span>
 </pre></div>
 
     </div>
@@ -13224,7 +13294,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">il</span>
@@ -13240,15 +13310,15 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>ImageList (70000 items)
-[Image (1, 28, 28), Image (1, 28, 28), Image (1, 28, 28), Image (1, 28, 28), Image (1, 28, 28)]...
-Path: /home/ubuntu/.fastai/data/mnist_png</pre>
+<pre>ImageList (16530 items)
+Image (1, 28, 28),Image (1, 28, 28),Image (1, 28, 28),Image (1, 28, 28),Image (1, 28, 28)
+Path: /storage/mnist_png</pre>
 </div>
 
 </div>
@@ -13259,7 +13329,7 @@ Path: /home/ubuntu/.fastai/data/mnist_png</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">il</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -13281,7 +13351,7 @@ Path: /home/ubuntu/.fastai/data/mnist_png</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMUAAADDCAYAAAAyYdXtAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDMuMC4yLCBodHRwOi8vbWF0cGxvdGxpYi5vcmcvOIA7rQAABLZJREFUeJzt3b9LlW0cx3HNh4aEaAijQoSg1lZFGoLqL2hwaGvrH3CXpgKJFBrEwcXB/oeGoGiLIJwaEpGw3JxKy2d8eD7ne8M5cX55fL3GL4fba+jthVfnvu/xk5OTMeA/5wa9ABg2ooAgCgiigCAKCKKAIAoI//T55/lPEYbJeDW0U0AQBQRRQBAFBFFAEAUEUUAQBQRRQBAFBFFAEAUEUUAQBQRRQBAFBFFAEAUEUUAQBQRRQOj30zw4pT58+FDO5+bmyvnbt2/L+Z07d7q2pl6xU0AQBQRRQBAFBFFAcPpEW16+fFnOx8fLx7GOrayslHOnT3AKiQKCKCCIAoIoIDh94n9+/PhRzt+9e9fRda5evdqN5QyEnQKCKCCIAoIoIIgCgtOnNn379q2cf/r0qZzfv3+/ZTYxMdHVNfXC9vZ2Od/d3e3oOo8ePerGcgbCTgFBFBBEAUEUEEQBwelTm169elXOnz59Ws4PDw9bZpOTk11dUy+8fv160EsYODsFBFFAEAUEUUAQBQSnT2F5ebmcP3v2rM8r6b2jo6OW2efPnzu6xvz8fDm/ffv2X61pGNgpIIgCgiggiAKCKCCc2dOnvb29cr66ulrOf/36Vc5Pw910Td68edMya3pXXZO7d++W8/Pnz//VmoaBnQKCKCCIAoIoIIz8H9rHx8flfG1trZx//fq1o+tvbW2V89NwQ1EnD02+fv16OX/8+HG3ljM07BQQRAFBFBBEAUEUEEb+9KnpNGlpaamj68zOzpbzBw8edLqkoXFwcND2Zy9fvlzOZ2ZmurWcoWGngCAKCKKAIAoIooAw8qdP3dL0eqvnz5+X83v37rV97Vu3bpXzqamptq/xN9bX19v+7PT0dA9XMlzsFBBEAUEUEEQBQRQQxk9OTvr58/r6w8bGxsa+fPlSzptOfAbh5s2b5bzXp0/v379vmTX9e9jc3CznCwsLXV1Tn41XQzsFBFFAEAUEUUAQBYSRP33a398v50130u3s7PRyOUPv2rVr5Xx7e7ucX7x4sZfL6TWnT9AOUUAQBQRRQBAFhJG/8+7KlSvl/OPHj+W86XlQL1686Nqahtnc3Fw5P+WnTB2xU0AQBQRRQBAFBFFAGPnvPnXqz58/5fz3798dXWd5eblldnR0VH626Ynely5dKudN39tqulPvxo0b5fz79+8ts9XV1fKzT548KeennO8+QTtEAUEUEEQBYeS/5tGpc+fq3xNN8yaLi4vdWE5HNjY2ynn1BzXN7BQQRAFBFBBEAUEUEEQBQRQQRAFBFBBEAUEUEEQBQRQQRAFBFBBEAUEUENx5d4ZduHChZfbw4cMBrGS42CkgiAKCKCCIAoIoIDh9OsOqh0YfHByUn216ePMoslNAEAUEUUAQBQRRQPB6rxHy8+fPcj4zM1POvd7L672gLaKAIAoIooAgCghOnzjLnD5BO0QBQRQQRAFBFBBEAUEUEEQBQRQQRAFBFBBEAUEUEEQBQRQQRAFBFBBEAUEUEEQBQRQQRAGh36/3Kh8pAsPETgFBFBBEAUEUEEQBQRQQRAFBFBBEAUEUEEQBQRQQRAFBFBBEAUEUEEQBQRQQRAFBFBBEAUEUEEQB4V995LZxp9qfvwAAAABJRU5ErkJggg==
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMUAAADDCAYAAAAyYdXtAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDMuMC4yLCBodHRwOi8vbWF0cGxvdGxpYi5vcmcvOIA7rQAABS9JREFUeJzt3btqVHsYxuEZEdsIHlIIprCQiOAVeOg8dSI2iooWgqQQvASvIB6KBCRNKlERvAJzAUKaqGChNoIRtFELwdnl3rzzrc2aOJNMkucpX4bJYsuPRf57sqbb6/U6wL92bPQFwLgRBQRRQBAFBFFAEAUEUUDYuc4/z/8UYZx0q9GdAoIoIIgCgiggiAKCKCCIAoIoIIgCgiggiAKCKCCIAoIoIIgCgiggiAKCKCCIAoIoIIgCgiggiAKCKCCIAoIoIIgCgiggiAKCKCCIAoIoIIgCwnp/k9HILC8vl/vS0lK5z83NlfvKyspQrmf//v192/T0dPnavXv3lvvbt28Hev2FCxfKvderv0Dq2rVrfdvExET52u3EnQKCKCCIAoIoIIgCQrfpZGJERvbDJicny/3r16+j+pFD0/Rv0O2WX/M8tPc/d+5c37awsFC+dt++fUO5ljHje7ShDVFAEAUEUUAQBYQtc/q0Y0fdd9MJzoEDB8r96tWr5X78+PFyb/qs1Pz8fLkP8t5v3rwp90FP1N69e1fu1X+bs2fPlq9dXFws9927dw90LWPG6RO0IQoIooAgCgiigLDlT5+OHj1a7i9fviz3qampoV3TuLh06VK5P3v2rPV7zM7OlvvMzMyarmlMOH2CNkQBQRQQRAFBFBC2zHOf/vz5s9GXMLaePHlS7ocPH+7b3r9/P+rLGXvuFBBEAUEUEEQBQRQQRAFBFBBEAUEUEEQBYct8zIPh2LVrV7lv8kfZDMSdAoIoIIgCgiggiAKC06dt4NWrV+W+urrat929e7d87ZUrV4Z6TePMnQKCKCCIAoIoIIgCgtOnbeDhw4flPjEx0bddvnx51Jcz9twpIIgCgiggiAKCKCA4ffpLTZ8r+vnzZ+v3aPpKsSNHjpT7jx8/yn1paancm77G6/z5833b9PR0+drtxJ0CgiggiAKCKCCIAoLTp5a+f/9e7tevXy/3T58+tX7vgwcPlnvTSdCvX7/Kven0qemZTZv8i+FHxp0CgiggiAKCKCCIAoLTp5Y+fvxY7k0nQcN470FOsP7Pixcvyv3EiRNDef+txp0CgiggiAKCKCD4RbulY8eOlXv1hzqdTqezsLDQ+r17vd6arildvHix3P1CPRh3CgiigCAKCKKAIAoI3WGdfLS0rj9sPTQ9yubz589929OnT8vXLi4ulvvKysraL+w/Dh06VO7379/v286cOTOUn7lJdKvRnQKCKCCIAoIoIIgCgtOnMdD0R0bPnz8v9/n5+XL/8uVLuX/79q3cJycn+7a5ubnytU2fn2p6fM4m4fQJ2hAFBFFAEAUEUUBw+rSFND1g+dSpU+Xe7ZaHL6WTJ0+W++3bt8u96a8Ax4zTJ2hDFBBEAUEUEEQBwenTNnbz5s2+bZDnVXU6zc+sevz4cbnfuHFjoPcfMadP0IYoIIgCgiggiAKCp45vYw8ePOjb9uzZU7626ZlVHz58KPc7d+6U++/fv8v91q1b5b4R3CkgiAKCKCCIAoIoIPjsE63cu3ev3B89elTuq6ur5T41NVXur1+/LvcRP1fKZ5+gDVFAEAUEUUDwizZ/ZXl5udxPnz5d7k2/gM/Ozpb7zMzM2i6sHb9oQxuigCAKCKKAIAoITp/Yzpw+QRuigCAKCKKAIAoIooAgCgiigCAKCKKAIAoI6/2A5fbfZg4bxJ0CgiggiAKCKCCIAoIoIIgCgiggiAKCKCCIAoIoIIgCgiggiAKCKCCIAoIoIIgCgiggiAKCKCCIAsI/IOL2WajEh48AAAAASUVORK5CYII=
 "
 >
 </div>
@@ -13294,10 +13364,11 @@ Path: /home/ubuntu/.fastai/data/mnist_png</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd</span> <span class="o">=</span> <span class="n">il</span><span class="o">.</span><span class="n">split_by_folder</span><span class="p">(</span><span class="n">train</span><span class="o">=</span><span class="s1">&#39;training&#39;</span><span class="p">,</span> <span class="n">valid</span><span class="o">=</span><span class="s1">&#39;testing&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># you always have to split - if you don&#39;t want a separate validation set use `.no_split()`</span>
+<span class="n">sd</span> <span class="o">=</span> <span class="n">il</span><span class="o">.</span><span class="n">split_by_folder</span><span class="p">(</span><span class="n">train</span><span class="o">=</span><span class="s1">&#39;training&#39;</span><span class="p">,</span> <span class="n">valid</span><span class="o">=</span><span class="s1">&#39;testing&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13307,7 +13378,7 @@ Path: /home/ubuntu/.fastai/data/mnist_png</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd</span>
@@ -13323,7 +13394,7 @@ Path: /home/ubuntu/.fastai/data/mnist_png</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -13331,13 +13402,13 @@ Path: /home/ubuntu/.fastai/data/mnist_png</pre>
 <div class="output_text output_subarea output_execute_result">
 <pre>ItemLists;
 
-Train: ImageList (60000 items)
-[Image (1, 28, 28), Image (1, 28, 28), Image (1, 28, 28), Image (1, 28, 28), Image (1, 28, 28)]...
-Path: /home/ubuntu/.fastai/data/mnist_png;
+Train: ImageList (6530 items)
+Image (1, 28, 28),Image (1, 28, 28),Image (1, 28, 28),Image (1, 28, 28),Image (1, 28, 28)
+Path: /storage/mnist_png;
 
 Valid: ImageList (10000 items)
-[Image (1, 28, 28), Image (1, 28, 28), Image (1, 28, 28), Image (1, 28, 28), Image (1, 28, 28)]...
-Path: /home/ubuntu/.fastai/data/mnist_png;
+Image (1, 28, 28),Image (1, 28, 28),Image (1, 28, 28),Image (1, 28, 28),Image (1, 28, 28)
+Path: /storage/mnist_png;
 
 Test: None</pre>
 </div>
@@ -13350,7 +13421,7 @@ Test: None</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">&#39;training&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
@@ -13366,22 +13437,14 @@ Test: None</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training/4&#39;),
- PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training/6&#39;),
- PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training/8&#39;),
- PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training/0&#39;),
- PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training/9&#39;),
- PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training/1&#39;),
- PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training/3&#39;),
- PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training/2&#39;),
- PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training/5&#39;),
- PosixPath(&#39;/home/ubuntu/.fastai/data/mnist_png/training/7&#39;)]</pre>
+<pre>[PosixPath(&#39;/storage/mnist_png/training/2&#39;),
+ PosixPath(&#39;/storage/mnist_png/training/7&#39;)]</pre>
 </div>
 
 </div>
@@ -13392,13 +13455,35 @@ Test: None</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ll</span> <span class="o">=</span> <span class="n">sd</span><span class="o">.</span><span class="n">label_from_folder</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># each number of mnist is in a separate folder, so we use `label_from_folder`</span>
+<span class="n">ll</span> <span class="o">=</span> <span class="n">sd</span><span class="o">.</span><span class="n">label_from_folder</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/opt/conda/envs/fastai/lib/python3.6/site-packages/fastai/data_block.py:537: UserWarning: You are labelling your items with CategoryList.
+Your valid set contained the following unknown labels, the corresponding items have been discarded.
+8, 4, 5, 3, 1...
+  if getattr(ds, &#39;warn&#39;, False): warn(ds.warn)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13519,7 +13604,9 @@ Test: None</pre>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tfms</span> <span class="o">=</span> <span class="p">([</span><span class="o">*</span><span class="n">rand_pad</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">)],</span> <span class="p">[])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># don&#39;t want to flip or rotate here, just adding a bit of random padding for augmentation</span>
+<span class="c1"># rand_pad returns two transforms so we use * to add them both to the list</span>
+<span class="n">tfms</span> <span class="o">=</span> <span class="p">([</span><span class="o">*</span><span class="n">rand_pad</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">)],</span> <span class="p">[])</span>
 </pre></div>
 
     </div>
@@ -13558,7 +13645,7 @@ Test: None</pre>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># not using imagenet_stats because not using pretrained model</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># not using imagenet_stats (for normalisation) because not using pretrained model</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">ll</span><span class="o">.</span><span class="n">databunch</span><span class="p">(</span><span class="n">bs</span><span class="o">=</span><span class="n">bs</span><span class="p">)</span><span class="o">.</span><span class="n">normalize</span><span class="p">()</span>
 </pre></div>
 
@@ -13632,7 +13719,8 @@ Test: None</pre>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">_plot</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">ax</span><span class="p">):</span> <span class="n">data</span><span class="o">.</span><span class="n">train_ds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># showing augmentation (random padding &amp; cropping)</span>
+<span class="k">def</span> <span class="nf">_plot</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">ax</span><span class="p">):</span> <span class="n">data</span><span class="o">.</span><span class="n">train_ds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
 <span class="n">plot_multi</span><span class="p">(</span><span class="n">_plot</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 </pre></div>
 
@@ -13757,14 +13845,15 @@ Test: None</pre>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
-    <span class="n">conv</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="c1"># 14</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># each time we have a convolution it will half the grid size, as we have a stride of 2</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+    <span class="n">conv</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="c1"># 28x28 image is now a 14x14 tensor in 8 neurons</span>
     <span class="n">nn</span><span class="o">.</span><span class="n">BatchNorm2d</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
     <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
     <span class="n">conv</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="c1"># 7</span>
     <span class="n">nn</span><span class="o">.</span><span class="n">BatchNorm2d</span><span class="p">(</span><span class="mi">16</span><span class="p">),</span>
     <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
-    <span class="n">conv</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span> <span class="c1"># 4</span>
+    <span class="n">conv</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span> <span class="c1"># 4 (stride 2 conv over 7 is ceil(7/2))</span>
     <span class="n">nn</span><span class="o">.</span><span class="n">BatchNorm2d</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
     <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
     <span class="n">conv</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="c1"># 2</span>
@@ -13772,7 +13861,7 @@ Test: None</pre>
     <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
     <span class="n">conv</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="c1"># 1</span>
     <span class="n">nn</span><span class="o">.</span><span class="n">BatchNorm2d</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
-    <span class="n">Flatten</span><span class="p">()</span>     <span class="c1"># remove (1,1) grid</span>
+    <span class="n">Flatten</span><span class="p">()</span>     <span class="c1"># remove any unit axes ((1,1) grid) to make a vector of length n_classes</span>
 <span class="p">)</span>
 </pre></div>
 
@@ -13799,7 +13888,8 @@ Test: None</pre>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">learn</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># you can see the reductions in image size in the &#39;output shape&#39; column below</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">learn</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
 </pre></div>
 
     </div>
@@ -14056,7 +14146,8 @@ Total time: 00:30 <p><table style='width:300px; margin-bottom:10px'>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv2</span><span class="p">(</span><span class="n">ni</span><span class="p">,</span><span class="n">nf</span><span class="p">):</span> <span class="k">return</span> <span class="n">conv_layer</span><span class="p">(</span><span class="n">ni</span><span class="p">,</span><span class="n">nf</span><span class="p">,</span><span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># conv_layer is a fastai function that allows you to create conv - batch_norm - relu layers</span>
+<span class="k">def</span> <span class="nf">conv2</span><span class="p">(</span><span class="n">ni</span><span class="p">,</span><span class="n">nf</span><span class="p">):</span> <span class="k">return</span> <span class="n">conv_layer</span><span class="p">(</span><span class="n">ni</span><span class="p">,</span><span class="n">nf</span><span class="p">,</span><span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14209,8 +14300,9 @@ Total time: 01:12 <p><table style='width:300px; margin-bottom:10px'>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">ResBlock</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nf</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># resblock (skip connection)</span>
+<span class="k">class</span> <span class="nc">ResBlock</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nf</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">conv1</span> <span class="o">=</span> <span class="n">conv_layer</span><span class="p">(</span><span class="n">nf</span><span class="p">,</span><span class="n">nf</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">conv2</span> <span class="o">=</span> <span class="n">conv_layer</span><span class="p">(</span><span class="n">nf</span><span class="p">,</span><span class="n">nf</span><span class="p">)</span>
@@ -14228,7 +14320,8 @@ Total time: 01:12 <p><table style='width:300px; margin-bottom:10px'>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">res_block</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># this is the res_block function in fast.ai that takes number of filters in as an argument</span>
+<span class="n">help</span><span class="p">(</span><span class="n">res_block</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14263,7 +14356,8 @@ res_block(nf, dense:bool=False, norm_type:Union[fastai.layers.NormType, NoneType
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># same as last CNN, but with a res_block after each conv2</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
     <span class="n">conv2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>
     <span class="n">res_block</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
     <span class="n">conv2</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
@@ -14287,7 +14381,8 @@ res_block(nf, dense:bool=False, norm_type:Union[fastai.layers.NormType, NoneType
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv_and_res</span><span class="p">(</span><span class="n">ni</span><span class="p">,</span><span class="n">nf</span><span class="p">):</span> <span class="k">return</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="n">conv2</span><span class="p">(</span><span class="n">ni</span><span class="p">,</span> <span class="n">nf</span><span class="p">),</span> <span class="n">res_block</span><span class="p">(</span><span class="n">nf</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># refactor again: conv_and_res</span>
+<span class="k">def</span> <span class="nf">conv_and_res</span><span class="p">(</span><span class="n">ni</span><span class="p">,</span><span class="n">nf</span><span class="p">):</span> <span class="k">return</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="n">conv2</span><span class="p">(</span><span class="n">ni</span><span class="p">,</span> <span class="n">nf</span><span class="p">),</span> <span class="n">res_block</span><span class="p">(</span><span class="n">nf</span><span class="p">))</span>
 </pre></div>
 
     </div>

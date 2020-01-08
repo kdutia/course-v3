@@ -13210,13 +13210,13 @@ div#notebook {
 
  
  
-<div id="7fb1a2d7-ae0a-4642-a992-274dac0952a4"></div>
+<div id="a1d3f957-588f-4f79-be7d-3636b7382dc4"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#7fb1a2d7-ae0a-4642-a992-274dac0952a4');
+var element = $('#a1d3f957-588f-4f79-be7d-3636b7382dc4');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "model_id": "15fc98bc106246bf959514cfc19b1f49", "version_minor": 0}
+{"version_major": 2, "version_minor": 0, "model_id": "15fc98bc106246bf959514cfc19b1f49"}
 </script>
 </div>
 
@@ -13281,7 +13281,7 @@ hi
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">sleep</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 </pre></div>
 
     </div>
@@ -13365,7 +13365,7 @@ hi
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">show_progress</span><span class="p">(</span><span class="n">epoch</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Awesome! We&#39;ve finished epoch </span><span class="si">{epoch}</span><span class="s2">!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Awesome! We&#39;ve finished epoch </span><span class="si">{epoch}</span><span class="s2">!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13441,7 +13441,7 @@ Awesome! We&#39;ve finished epoch 4!
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">slow_calculation</span><span class="p">(</span><span class="k">lambda</span> <span class="n">o</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Awesome! We&#39;ve finished epoch </span><span class="si">{o}</span><span class="s2">!&quot;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">slow_calculation</span><span class="p">(</span><span class="k">lambda</span> <span class="n">o</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Awesome! We&#39;ve finished epoch </span><span class="si">{o}</span><span class="s2">!&quot;</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13490,7 +13490,7 @@ Awesome! We&#39;ve finished epoch 4!
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">show_progress</span><span class="p">(</span><span class="n">exclamation</span><span class="p">,</span> <span class="n">epoch</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{exclamation}</span><span class="s2">! We&#39;ve finished epoch </span><span class="si">{epoch}</span><span class="s2">!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{exclamation}</span><span class="s2">! We&#39;ve finished epoch </span><span class="si">{epoch}</span><span class="s2">!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13552,7 +13552,7 @@ OK I guess! We&#39;ve finished epoch 4!
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_show_progress</span><span class="p">(</span><span class="n">exclamation</span><span class="p">):</span>
-    <span class="n">_inner</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">epoch</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{exclamation}</span><span class="s2">! We&#39;ve finished epoch </span><span class="si">{epoch}</span><span class="s2">!&quot;</span><span class="p">)</span>
+    <span class="n">_inner</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">epoch</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{exclamation}</span><span class="s2">! We&#39;ve finished epoch </span><span class="si">{epoch}</span><span class="s2">!&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">_inner</span>
 </pre></div>
 
@@ -13616,7 +13616,7 @@ Nice!! We&#39;ve finished epoch 4!
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_show_progress</span><span class="p">(</span><span class="n">exclamation</span><span class="p">):</span>
     <span class="c1"># Leading &quot;_&quot; is generally understood to be &quot;private&quot;</span>
-    <span class="k">def</span> <span class="nf">_inner</span><span class="p">(</span><span class="n">epoch</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{exclamation}</span><span class="s2">! We&#39;ve finished epoch </span><span class="si">{epoch}</span><span class="s2">!&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_inner</span><span class="p">(</span><span class="n">epoch</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{exclamation}</span><span class="s2">! We&#39;ve finished epoch </span><span class="si">{epoch}</span><span class="s2">!&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">_inner</span>
 </pre></div>
 
@@ -13787,7 +13787,7 @@ Amazing! We&#39;ve finished epoch 4!
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
 </pre></div>
 
     </div>
@@ -13877,8 +13877,8 @@ OK I guess! We&#39;ve finished epoch 4!
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">ProgressShowingCallback</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exclamation</span><span class="o">=</span><span class="s2">&quot;Awesome&quot;</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">exclamation</span> <span class="o">=</span> <span class="n">exclamation</span>
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.exclamation}</span><span class="s2">! We&#39;ve finished epoch </span><span class="si">{epoch}</span><span class="s2">!&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exclamation</span><span class="o">=</span><span class="s2">&quot;Awesome&quot;</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">exclamation</span> <span class="o">=</span> <span class="n">exclamation</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{self.exclamation}</span><span class="s2">! We&#39;ve finished epoch </span><span class="si">{epoch}</span><span class="s2">!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13967,7 +13967,7 @@ Just super! We&#39;ve finished epoch 4!
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;args: </span><span class="si">{args}</span><span class="s2">; kwargs: </span><span class="si">{kwargs}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;args: </span><span class="si">{args}</span><span class="s2">; kwargs: </span><span class="si">{kwargs}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14040,9 +14040,9 @@ Just super! We&#39;ve finished epoch 4!
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">PrintStepCallback</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">pass</span>
-    <span class="k">def</span> <span class="nf">before_calc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;About to start&quot;</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">after_calc</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Done step&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">pass</span>
+    <span class="k">def</span> <span class="nf">before_calc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;About to start&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">after_calc</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Done step&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14109,9 +14109,9 @@ Done step
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">PrintStatusCallback</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">pass</span>
-    <span class="k">def</span> <span class="nf">before_calc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;About to start: </span><span class="si">{epoch}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">after_calc</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;After </span><span class="si">{epoch}</span><span class="s2">: </span><span class="si">{val}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">pass</span>
+    <span class="k">def</span> <span class="nf">before_calc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;About to start: </span><span class="si">{epoch}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">after_calc</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After </span><span class="si">{epoch}</span><span class="s2">: </span><span class="si">{val}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14217,7 +14217,7 @@ After 4: 30
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">PrintAfterCallback</span><span class="p">():</span>
     <span class="k">def</span> <span class="nf">after_calc</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;After </span><span class="si">{epoch}</span><span class="s2">: </span><span class="si">{val}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After </span><span class="si">{epoch}</span><span class="s2">: </span><span class="si">{val}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">val</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 
@@ -14280,7 +14280,7 @@ stopping early
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">SlowCalculator</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cb</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">cb</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">res</span> <span class="o">=</span> <span class="n">cb</span><span class="p">,</span><span class="mi">0</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cb</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">cb</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">res</span> <span class="o">=</span> <span class="n">cb</span><span class="p">,</span><span class="mi">0</span>
     
     <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cb_name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cb</span><span class="p">:</span> <span class="k">return</span>
@@ -14309,7 +14309,7 @@ stopping early
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">ModifyingCallback</span><span class="p">():</span>
     <span class="k">def</span> <span class="nf">after_calc</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">calc</span><span class="p">,</span> <span class="n">epoch</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;After </span><span class="si">{epoch}</span><span class="s2">: </span><span class="si">{calc.res}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After </span><span class="si">{epoch}</span><span class="s2">: </span><span class="si">{calc.res}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">calc</span><span class="o">.</span><span class="n">res</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
         <span class="k">if</span> <span class="n">calc</span><span class="o">.</span><span class="n">res</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">:</span> <span class="n">calc</span><span class="o">.</span><span class="n">res</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">res</span><span class="o">*</span><span class="mi">2</span>
 </pre></div>
@@ -14411,9 +14411,9 @@ stopping early
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">SloppyAdder</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">o</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">o</span><span class="o">=</span><span class="n">o</span>
-    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">b</span><span class="p">):</span> <span class="k">return</span> <span class="n">SloppyAdder</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">o</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="n">o</span> <span class="o">+</span> <span class="mf">0.01</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">o</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">o</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">o</span><span class="o">=</span><span class="n">o</span>
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">b</span><span class="p">):</span> <span class="k">return</span> <span class="n">SloppyAdder</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">o</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="n">o</span> <span class="o">+</span> <span class="mf">0.01</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">o</span><span class="p">)</span>
 </pre></div>
 
     </div>

@@ -13103,7 +13103,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
-<span class="kn">from</span> <span class="nn">exp.nb_12a</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">exp.nb_12a</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 
     </div>
@@ -13775,7 +13775,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
-<span class="kn">from</span> <span class="nn">torch.nn.utils.rnn</span> <span class="k">import</span> <span class="n">pack_padded_sequence</span><span class="p">,</span> <span class="n">pad_packed_sequence</span>
+<span class="kn">from</span> <span class="nn">torch.nn.utils.rnn</span> <span class="kn">import</span> <span class="n">pack_padded_sequence</span><span class="p">,</span> <span class="n">pad_packed_sequence</span>
 </pre></div>
 
     </div>
@@ -14050,7 +14050,7 @@ div#notebook {
     <span class="s2">&quot;AWD-LSTM inspired by https://arxiv.org/abs/1708.02182.&quot;</span>
     <span class="n">initrange</span><span class="o">=</span><span class="mf">0.1</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vocab_sz</span><span class="p">,</span> <span class="n">emb_sz</span><span class="p">,</span> <span class="n">n_hid</span><span class="p">,</span> <span class="n">n_layers</span><span class="p">,</span> <span class="n">pad_token</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vocab_sz</span><span class="p">,</span> <span class="n">emb_sz</span><span class="p">,</span> <span class="n">n_hid</span><span class="p">,</span> <span class="n">n_layers</span><span class="p">,</span> <span class="n">pad_token</span><span class="p">,</span>
                  <span class="n">hidden_p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">input_p</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">embed_p</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">weight_p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">bs</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">emb_sz</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">n_hid</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">n_layers</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">pad_token</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">emb_sz</span><span class="p">,</span><span class="n">n_hid</span><span class="p">,</span><span class="n">n_layers</span><span class="p">,</span><span class="n">pad_token</span>
@@ -14291,7 +14291,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">PoolingLinearClassifier</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="s2">&quot;Create a linear classifier with pooling.&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">drops</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">drops</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="n">mod_layers</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">activs</span> <span class="o">=</span> <span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
@@ -14346,7 +14346,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">SentenceEncoder</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">bptt</span><span class="p">,</span> <span class="n">pad_idx</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">bptt</span><span class="p">,</span> <span class="n">pad_idx</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">bptt</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">pad_idx</span> <span class="o">=</span> <span class="n">bptt</span><span class="p">,</span><span class="n">module</span><span class="p">,</span><span class="n">pad_idx</span>
 

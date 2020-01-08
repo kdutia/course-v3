@@ -13103,7 +13103,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
-<span class="kn">from</span> <span class="nn">exp.nb_10</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">exp.nb_10</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 
     </div>
@@ -13337,7 +13337,7 @@ div#notebook {
 <span class="c1">#     y = (x.pow(α-1) * (1-x).pow(α-1)) / (gamma_func(α ** 2) / gamma_func(α))</span>
     <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="p">(</span><span class="n">α</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">α</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">Γ</span><span class="p">(</span><span class="n">α</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">Γ</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">α</span><span class="p">))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;α=</span><span class="si">{α:.1}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;α=</span><span class="si">{α:.1}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13389,17 +13389,17 @@ The last trick we have to apply with this is that there can be some duplicates w
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
 <span class="k">class</span> <span class="nc">NoneReduce</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loss_func</span><span class="p">):</span> 
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loss_func</span><span class="p">):</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">loss_func</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">old_red</span> <span class="o">=</span> <span class="n">loss_func</span><span class="p">,</span><span class="kc">None</span>
         
-    <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">loss_func</span><span class="p">,</span> <span class="s1">&#39;reduction&#39;</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">old_red</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">loss_func</span><span class="p">,</span> <span class="s1">&#39;reduction&#39;</span><span class="p">)</span>
             <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">loss_func</span><span class="p">,</span> <span class="s1">&#39;reduction&#39;</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">)</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss_func</span>
         <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">loss_func</span><span class="p">,</span> <span class="n">reduction</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
         
-    <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">old_red</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span> <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">loss_func</span><span class="p">,</span> <span class="s1">&#39;reduction&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">old_red</span><span class="p">)</span>
 </pre></div>
 
@@ -13422,7 +13422,7 @@ The last trick we have to apply with this is that there can be some duplicates w
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
-<span class="kn">from</span> <span class="nn">torch.distributions.beta</span> <span class="k">import</span> <span class="n">Beta</span>
+<span class="kn">from</span> <span class="nn">torch.distributions.beta</span> <span class="kn">import</span> <span class="n">Beta</span>
 
 <span class="k">def</span> <span class="nf">unsqueeze</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">dims</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">dim</span> <span class="ow">in</span> <span class="n">listify</span><span class="p">(</span><span class="n">dims</span><span class="p">):</span> <span class="nb">input</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">dim</span><span class="p">)</span>
@@ -13445,7 +13445,7 @@ The last trick we have to apply with this is that there can be some duplicates w
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
 <span class="k">class</span> <span class="nc">MixUp</span><span class="p">(</span><span class="n">Callback</span><span class="p">):</span>
     <span class="n">_order</span> <span class="o">=</span> <span class="mi">90</span> <span class="c1">#Runs after normalization and cuda</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">α</span><span class="p">:</span><span class="nb">float</span><span class="o">=</span><span class="mf">0.4</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrib</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="n">tensor</span><span class="p">([</span><span class="n">α</span><span class="p">]),</span> <span class="n">tensor</span><span class="p">([</span><span class="n">α</span><span class="p">]))</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">α</span><span class="p">:</span><span class="nb">float</span><span class="o">=</span><span class="mf">0.4</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrib</span> <span class="o">=</span> <span class="n">Beta</span><span class="p">(</span><span class="n">tensor</span><span class="p">([</span><span class="n">α</span><span class="p">]),</span> <span class="n">tensor</span><span class="p">([</span><span class="n">α</span><span class="p">]))</span>
     
     <span class="k">def</span> <span class="nf">begin_fit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">old_loss_func</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">loss_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">loss_func</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">loss_func</span>
     
@@ -13586,7 +13586,7 @@ $$loss = (1-ε) ce(i) + ε \sum ce(j) / N$$<p>where <code>ce(x)</code> is cross-
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
 <span class="k">class</span> <span class="nc">LabelSmoothingCrossEntropy</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ε</span><span class="p">:</span><span class="nb">float</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">reduction</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ε</span><span class="p">:</span><span class="nb">float</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">reduction</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ε</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">reduction</span> <span class="o">=</span> <span class="n">ε</span><span class="p">,</span><span class="n">reduction</span>
     

@@ -13096,7 +13096,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
-<span class="kn">from</span> <span class="nn">exp.nb_05b</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">exp.nb_05b</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">torch</span><span class="o">.</span><span class="n">set_num_threads</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
@@ -13245,7 +13245,7 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
 <span class="k">class</span> <span class="nc">Lambda</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">func</span> <span class="o">=</span> <span class="n">func</span>
 
@@ -13437,7 +13437,7 @@ Wall time: 5.87 s
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">CudaCallback</span><span class="p">(</span><span class="n">Callback</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">device</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="o">=</span><span class="n">device</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">device</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="o">=</span><span class="n">device</span>
     <span class="k">def</span> <span class="nf">begin_fit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">begin_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">xb</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">yb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xb</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">),</span><span class="bp">self</span><span class="o">.</span><span class="n">yb</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
 </pre></div>
@@ -13618,7 +13618,7 @@ Wall time: 5.41 s
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
 <span class="k">class</span> <span class="nc">BatchTransformXCallback</span><span class="p">(</span><span class="n">Callback</span><span class="p">):</span>
     <span class="n">_order</span><span class="o">=</span><span class="mi">2</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tfm</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">tfm</span> <span class="o">=</span> <span class="n">tfm</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tfm</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">tfm</span> <span class="o">=</span> <span class="n">tfm</span>
     <span class="k">def</span> <span class="nf">begin_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">xb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tfm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xb</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">view_tfm</span><span class="p">(</span><span class="o">*</span><span class="n">size</span><span class="p">):</span>
@@ -13851,20 +13851,20 @@ valid: [0.13920831298828126, tensor(0.9606, device=&#39;cuda:0&#39;)]
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">SequentialModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">layers</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">layers</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ModuleList</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">act_means</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">act_stds</span>  <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">]</span>
         
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">):</span>
             <span class="n">x</span> <span class="o">=</span> <span class="n">l</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">act_means</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">act_stds</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">std</span> <span class="p">())</span>
         <span class="k">return</span> <span class="n">x</span>
     
-    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14260,9 +14260,9 @@ valid: [2.00057578125, tensor(0.3186, device=&#39;cuda:0&#39;)]
 <span class="k">def</span> <span class="nf">children</span><span class="p">(</span><span class="n">m</span><span class="p">):</span> <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">children</span><span class="p">())</span>
 
 <span class="k">class</span> <span class="nc">Hook</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">hook</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">register_forward_hook</span><span class="p">(</span><span class="n">partial</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">hook</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">register_forward_hook</span><span class="p">(</span><span class="n">partial</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span>
     <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">hook</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
-    <span class="k">def</span> <span class="nf">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">append_stats</span><span class="p">(</span><span class="n">hook</span><span class="p">,</span> <span class="n">mod</span><span class="p">,</span> <span class="n">inp</span><span class="p">,</span> <span class="n">outp</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">hook</span><span class="p">,</span><span class="s1">&#39;stats&#39;</span><span class="p">):</span> <span class="n">hook</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="p">([],[])</span>
@@ -14418,19 +14418,19 @@ valid: [0.89751240234375, tensor(0.7350, device=&#39;cuda:0&#39;)]
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
 <span class="k">class</span> <span class="nc">ListContainer</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span> <span class="o">=</span> <span class="n">listify</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span> <span class="o">=</span> <span class="n">listify</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">slice</span><span class="p">)):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">idx</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="nb">bool</span><span class="p">):</span>
             <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="c1"># bool mask</span>
             <span class="k">return</span> <span class="p">[</span><span class="n">o</span> <span class="k">for</span> <span class="n">m</span><span class="p">,</span><span class="n">o</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">)</span> <span class="k">if</span> <span class="n">m</span><span class="p">]</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">idx</span><span class="p">]</span>
-    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">o</span>
-    <span class="k">def</span> <span class="nf">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span> <span class="k">del</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;</span><span class="si">{self.__class__.__name__}</span><span class="s1"> ({len(self)} items)</span><span class="se">\n</span><span class="si">{self.items[:10]}</span><span class="s1">&#39;</span>
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">o</span>
+    <span class="k">def</span> <span class="fm">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span> <span class="k">del</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{self.__class__.__name__}</span><span class="s1"> ({len(self)} items)</span><span class="se">\n</span><span class="si">{self.items[:10]}</span><span class="s1">&#39;</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span> <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span> <span class="s1">&#39;...]&#39;</span>
         <span class="k">return</span> <span class="n">res</span>
 </pre></div>
@@ -14556,15 +14556,15 @@ valid: [0.89751240234375, tensor(0.7350, device=&#39;cuda:0&#39;)]
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
-<span class="kn">from</span> <span class="nn">torch.nn</span> <span class="k">import</span> <span class="n">init</span>
+<span class="kn">from</span> <span class="nn">torch.nn</span> <span class="kn">import</span> <span class="n">init</span>
 
 <span class="k">class</span> <span class="nc">Hooks</span><span class="p">(</span><span class="n">ListContainer</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ms</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">([</span><span class="n">Hook</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">ms</span><span class="p">])</span>
-    <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span>
-    <span class="k">def</span> <span class="nf">__exit__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
-    <span class="k">def</span> <span class="nf">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ms</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">([</span><span class="n">Hook</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">ms</span><span class="p">])</span>
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">def</span> <span class="fm">__exit__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
         <span class="bp">self</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__delitem__</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
         
@@ -15124,7 +15124,7 @@ valid: [0.310600634765625, tensor(0.9042, device=&#39;cuda:0&#39;)]
         <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="n">ni</span><span class="p">,</span> <span class="n">nf</span><span class="p">,</span> <span class="n">ks</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">ks</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="n">stride</span><span class="p">),</span> <span class="n">GeneralRelu</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
 
 <span class="k">class</span> <span class="nc">GeneralRelu</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">leak</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sub</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxv</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">leak</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sub</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxv</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">leak</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">sub</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">maxv</span> <span class="o">=</span> <span class="n">leak</span><span class="p">,</span><span class="n">sub</span><span class="p">,</span><span class="n">maxv</span>
 
@@ -15539,7 +15539,7 @@ valid: [0.06295247802734374, tensor(0.9822, device=&#39;cuda:0&#39;)]
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Javascript</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Javascript</span>
 <span class="k">def</span> <span class="nf">nb_auto_export</span><span class="p">():</span>
     <span class="n">display</span><span class="p">(</span><span class="n">Javascript</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;{</span>
 <span class="s2">const ip = IPython.notebook</span>
@@ -15581,10 +15581,10 @@ valid: [0.06295247802734374, tensor(0.9822, device=&#39;cuda:0&#39;)]
 
 
 
-<div id="16fdc683-7602-4ff9-92d4-41ddec960933"></div>
+<div id="9af57577-0fb8-4713-abf3-9f65c2dc21fb"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#16fdc683-7602-4ff9-92d4-41ddec960933');
+var element = $('#9af57577-0fb8-4713-abf3-9f65c2dc21fb');
 {
 const ip = IPython.notebook
 if (ip) {
